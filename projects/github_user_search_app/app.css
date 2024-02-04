@@ -41,7 +41,7 @@
     --color-1: #0079ff;
     --color-2: #ffffff;
     --color-3: #141d2f;
-    --color-4: #1e2a47;
+    --color-4: #fff;
     --background-color-1: #141d2f;
     --background-color-2: #1e2a47;
   }
@@ -112,6 +112,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+#section header h1 {
+  color: var(--color-4);
 }
 
 #section header .design  .design__light__mode,
@@ -220,6 +224,10 @@ body {
   align-items: center;
   justify-content: space-between;
   width: 100%;
+}
+
+#section main .profile .profile__bio .profile__bio__header h1 {
+  color: var(--color-4);
 }
 
 #section main .profile .profile__metrics {

@@ -101,31 +101,31 @@ body {
   background: var(--background-color-1);
 }
 
-#main__section {
+#section {
   display: flex;
   flex-direction: column;
   gap: var(--space-1);
   width: 730px;
 }
 
-#main__section header {
+#section header {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-#main__section header .design  .design__light__mode,
-#main__section header .design  .design__dark__mode {
+#section header .design  .design__light__mode,
+#section header .design  .design__dark__mode {
   display: flex;
   align-items: center;
   gap: var(--space-3);
   cursor: pointer;
 }
-#main__section header .design .design__light__mode {
+#section header .design .design__light__mode {
   display: none;
 }
 
-#main__section nav {
+#section nav {
   display: flex;
   justify-content: space-between;
   background: var(--background-color-2);
@@ -134,7 +134,7 @@ body {
   gap: var(--space-3);
 }
 
-#main__section nav span {
+#section nav span {
   display: flex;
   align-items: center;
   gap: calc(var(--space-3) * 2);
@@ -142,7 +142,7 @@ body {
   padding-left: var(--space-3);
 }
 
-#main__section nav span input {
+#section nav span input {
   background: none;
   appearance: none;
   border: none;
@@ -150,7 +150,7 @@ body {
   width: 100%;
 }
 
-#main__section nav button {
+#section nav button {
   background: var(--color-1);
   border: none;
   outline: none;
@@ -162,15 +162,15 @@ body {
   transition: 0.2s ease-in-out;
 }
 
-#main__section nav button:hover {
+#section nav button:hover {
   background: #2389ff;
 }
 
-#main__section nav button:active {
+#section nav button:active {
   transform: scale(0.9);
 }
 
-#main__section main {
+#section main {
   display: flex;
   padding: var(--space-1);
   background: var(--background-color-2);
@@ -178,7 +178,7 @@ body {
   gap: var(--space-1);
 }
 
-#main__section .profile__image {
+#section .profile__image {
   width: 117px;
   height: 117px;
   min-width: 117px;
@@ -186,43 +186,43 @@ body {
   border-radius: 50%;
 }
 
-#main__section .profile__image img {
+#section .profile__image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-#main__section main .profile {
+#section main .profile {
   display: flex;
   flex-direction: column;
   gap: var(--space-1);
   width: 100%;
 }
 
-#main__section main .profile .profile__bio {
+#section main .profile .profile__bio {
   display: flex;
   flex-direction: column;
   gap: var(--space-3);
   width: 100%;
 }
 
-#main__section main .profile .profile__bio p:nth-child(3),
-#main__section main .profile .profile__bio p:nth-child(2) {
+#section main .profile .profile__bio p:nth-child(3),
+#section main .profile .profile__bio p:nth-child(2) {
   color: var(--color-2);
 }
 
-#main__section main .profile .profile__bio .profile__bio__header__name {
+#section main .profile .profile__bio .profile__bio__header__name {
   color: var(--color-1) !important;
 }
 
-#main__section main .profile .profile__bio .profile__bio__header {
+#section main .profile .profile__bio .profile__bio__header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
 }
 
-#main__section main .profile .profile__metrics {
+#section main .profile .profile__metrics {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   padding: var(--space-2);
@@ -230,34 +230,34 @@ body {
   background: var(--background-color-1);
 }
 
-#main__section main .profile .profile__metrics .profile__metrics__card {
+#section main .profile .profile__metrics .profile__metrics__card {
   display: flex;
   flex-direction: column;
   gap: var(--space-4);
 }
 
-#main__section main .profile .profile__metrics .profile__metrics__card h4 {
+#section main .profile .profile__metrics .profile__metrics__card h4 {
   color: var(--color-2);
 }
 
-#main__section main .profile .profile__metrics .profile__metrics__card h2 {
+#section main .profile .profile__metrics .profile__metrics__card h2 {
   color: var(--color-4);
 }
 
-#main__section main .profile .profile__details {
+#section main .profile .profile__details {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   gap: var(--space-3);
 }
 
-#main__section main .profile .profile__details .profile__details__card {
+#section main .profile .profile__details .profile__details__card {
   display: flex;
   align-items: center;
   gap: var(--space-3);
 }
 
-#main__section main .profile .profile__details .profile__details__card p,
-#main__section main .profile .profile__details .profile__details__card a {
+#section main .profile .profile__details .profile__details__card p,
+#section main .profile .profile__details .profile__details__card a {
   color: var(--color-2);
 }

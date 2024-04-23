@@ -1,0 +1,28 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color-scheme: dark;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --app-color: #0079FF;
+        --common-color: #FFFFFF;
+        --text-color: #FFFFFF;
+        --heading-color: #FFFFFF;
+        --background-color-1: #141D2F;
+        --background-color-2: #1E2A47;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --app-color: #0079FF;
+        --common-color: #697C9A;
+        --text-color: #4B6A9B;
+        --heading-color: #2B3442;
+        --background-color-1: #F6F8FF;
+        --background-color-2: #FEFEFE;
+    }
+}

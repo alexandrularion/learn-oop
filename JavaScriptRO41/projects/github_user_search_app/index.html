@@ -6,72 +6,85 @@
     <title>Document</title>
     <!-- Import App.css -->
     <link rel="stylesheet" href="app.css" />
+    <!-- BEM: Block Element Modifier -->
   </head>
   <body>
     <!-- Header Section -->
-    <header>
-      <h1>devfinder</h1>
-      <button>
+    <header class="header">
+      <h1 class="header__heading">devfinder</h1>
+      <button class="header__btn">
         LIGHT
-        <img src="./assets/icon-sun.svg" alt="Light Mode" />
+        <img class="btn__img" src="./assets/icon-sun.svg" alt="Light Mode" />
       </button>
     </header>
 
     <!-- Navigation -->
-    <nav>
-      <img src="./assets/icon-search.svg" alt="Search" />
-      <input type="text" />
-      <button>Search</button>
+    <nav class="nav">
+      <img class="nav__img" src="./assets/icon-search.svg" alt="Search" />
+      <input class="nav__input" type="text" />
+      <button class="nav__btn">Search</button>
     </nav>
 
     <!-- Main Section -->
-    <section>
-      <div>
-        <img src="" alt="Avatar" />
+    <section class="profile">
+      <div class="profile__avatar">
+        <img class="avatar__img" src="" alt="Avatar" />
       </div>
-      <div>
+      <div class="profile__information">
         <!-- User details -->
-        <div>
-          <div>
-            <h2>The octocat</h2>
-            <p>@octocat</p>
+        <div class="information__details">
+          <div class="details__user">
+            <h2 class="user__heading">The octocat</h2>
+            <p class="user__text">@octocat</p>
           </div>
-          <p>Joined 25 Jan 2012</p>
+          <p class="details__created">Joined 25 Jan 2012</p>
         </div>
 
         <!-- Metrics -->
-        <div>
-          <div>
-            <p>Repos</p>
-            <h3>300</h3>
+        <div class="information__metrics">
+          <div class="metrics__card">
+            <p class="card__text">Repos</p>
+            <h3 class="card__heading">300</h3>
           </div>
-          <div>
-            <p>Followers</p>
+          <div class="metrics__card">
+            <p class="card__text">Followers</p>
             <h3>1000</h3>
           </div>
-          <div>
-            <p>Following</p>
-            <h3>200</h3>
+          <div class="metrics__card">
+            <p class="card__text">Following</p>
+            <h3 class="card__heading">200</h3>
           </div>
         </div>
 
         <!-- Links -->
-        <div>
-          <div>
-            <img src="./assets/icon-location.svg" alt="Location" />
-            <a href="#">Vaslui</a>
+        <div class="information__links">
+          <div class="links__card">
+            <img
+              class="card__img"
+              src="./assets/icon-location.svg"
+              alt="Location"
+            />
+            <a class="card__link" href="#">Vaslui</a>
           </div>
-          <div>
-            <img src="./assets/icon-twitter.svg" alt="X" />
-            <a href="#">@octocat</a>
+          <div class="links__card">
+            <img class="card__img" src="./assets/icon-twitter.svg" alt="X" />
+            <a class="card__link" href="#">@octocat</a>
           </div>
-          <div>
-            <img src="./assets/icon-website.svg" alt="Location" />
-            <a href="#">https://github.blog</a>
+          <div class="links__card">
+            <img
+              class="card__img"
+              src="./assets/icon-website.svg"
+              alt="Location"
+            />
+            <a class="card__link" href="#">https://github.blog</a>
           </div>
-          <div>
-            <img src="./assets/icon-company.svg" alt="Location" />
-            <a href="#">@github</a>
+          <div class="links__card">
+            <img
+              class="card__img"
+              src="./assets/icon-company.svg"
+              alt="Location"
+            />
+            <a class="card__link" href="#">@github</a>
           </div>
         </div>
       </div>

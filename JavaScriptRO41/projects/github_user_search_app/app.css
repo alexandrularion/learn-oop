@@ -149,3 +149,117 @@ body {
 .nav__input::placeholder {
     color: var(--text-color);
 }
+
+/* Main Section */
+.profile {
+    display: flex;
+    gap: var(--space-6);
+    background-color: var(--background-color-2);
+    border-radius: var(--radii-2);
+    padding: 43px 48px;
+}
+
+.profile__avatar {
+    min-width: 117px;
+    height: 117px;
+}
+
+.avatar__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--radii-3);
+}
+
+.profile__information {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.information__details {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: var(--space-3);
+    width: 100%;
+}
+
+.user__heading {
+    font-size: var(--heading-size-1);
+    line-height: var(--heading-line-height-1);
+    color: var(--heading-color);
+    font-weight: 700;
+}
+
+.user__text {
+    font-size: var(--text-size);
+    line-height: var(--text-line-height);
+    color: var(--app-color);
+    font-weight: 400;
+}
+
+.details__created {
+    font-size: var(--text-size);
+    line-height: var(--text-line-height);
+    color: var(--common-color);
+    font-weight: 400;
+}
+
+.information__description {
+    font-size: var(--text-size);
+    line-height: var(--text-line-height);
+    color: var(--text-color);
+    font-weight: 400;
+    padding-bottom: var(--space-5);
+}
+
+.information__metrics {
+    background: var(--background-color-1);
+    border-radius: var(--radii-1);
+    padding: 15px 32px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.metrics__card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+}
+
+.card__text {
+    font-size: var(--heading-size-4);
+    line-height: var(--heading-line-height-4);
+    color: var(--heading-color);
+    font-weight: 400;
+}
+
+.card__heading {
+    font-size: var(--heading-size-2);
+    line-height: var(--heading-line-height-2);
+    color: var(--heading-color);
+    font-weight: 700;
+}
+
+.information__links {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+    gap: var(--space-2) calc(var(--space-6) * 2);
+    padding-top: var(--space-6);
+}
+
+.links__card {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+}
+
+.card__link {
+    font-size: var(--text-size);
+    line-height: var(--text-line-height);
+    color: var(--text-color);
+    font-weight: 400;
+    text-decoration: none;
+}

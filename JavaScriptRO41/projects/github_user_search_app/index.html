@@ -9,86 +9,99 @@
     <!-- BEM: Block Element Modifier -->
   </head>
   <body>
-    <!-- Header Section -->
-    <header class="header">
-      <h1 class="header__heading">devfinder</h1>
-      <button class="header__btn">
-        LIGHT
-        <img class="btn__img" src="./assets/icon-sun.svg" alt="Light Mode" />
-      </button>
-    </header>
+    <!-- Layout: Adjust the width of children elements -->
+    <div class="layout">
+      <!-- Header Section -->
+      <header class="header">
+        <h1 class="header__heading">devfinder</h1>
+        <button class="header__btn">
+          LIGHT
+          <img class="btn__img" src="./assets/icon-sun.svg" alt="Light Mode" />
+        </button>
+      </header>
 
-    <!-- Navigation -->
-    <nav class="nav">
-      <img class="nav__img" src="./assets/icon-search.svg" alt="Search" />
-      <input class="nav__input" type="text" />
-      <button class="nav__btn">Search</button>
-    </nav>
+      <div class="layout--main">
+        <!-- Navigation -->
+        <nav class="nav">
+          <img class="nav__img" src="./assets/icon-search.svg" alt="Search" />
+          <input
+            class="nav__input"
+            type="text"
+            placeholder="Search GitHub username…"
+          />
+          <button class="nav__btn">Search</button>
+        </nav>
 
-    <!-- Main Section -->
-    <section class="profile">
-      <div class="profile__avatar">
-        <img class="avatar__img" src="" alt="Avatar" />
+        <!-- Main Section -->
+        <section class="profile">
+          <div class="profile__avatar">
+            <img class="avatar__img" src="" alt="Avatar" />
+          </div>
+          <div class="profile__information">
+            <!-- User details -->
+            <div class="information__details">
+              <div class="details__user">
+                <h2 class="user__heading">The octocat</h2>
+                <p class="user__text">@octocat</p>
+              </div>
+              <p class="details__created">Joined 25 Jan 2012</p>
+            </div>
+
+            <!-- Metrics -->
+            <div class="information__metrics">
+              <div class="metrics__card">
+                <p class="card__text">Repos</p>
+                <h3 class="card__heading">300</h3>
+              </div>
+              <div class="metrics__card">
+                <p class="card__text">Followers</p>
+                <h3>1000</h3>
+              </div>
+              <div class="metrics__card">
+                <p class="card__text">Following</p>
+                <h3 class="card__heading">200</h3>
+              </div>
+            </div>
+
+            <!-- Links -->
+            <div class="information__links">
+              <div class="links__card">
+                <img
+                  class="card__img"
+                  src="./assets/icon-location.svg"
+                  alt="Location"
+                />
+                <a class="card__link" href="#">Vaslui</a>
+              </div>
+              <div class="links__card">
+                <img
+                  class="card__img"
+                  src="./assets/icon-twitter.svg"
+                  alt="X"
+                />
+                <a class="card__link" href="#">@octocat</a>
+              </div>
+              <div class="links__card">
+                <img
+                  class="card__img"
+                  src="./assets/icon-website.svg"
+                  alt="Location"
+                />
+                <a class="card__link" href="#">https://github.blog</a>
+              </div>
+              <div class="links__card">
+                <img
+                  class="card__img"
+                  src="./assets/icon-company.svg"
+                  alt="Location"
+                />
+                <a class="card__link" href="#">@github</a>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
-      <div class="profile__information">
-        <!-- User details -->
-        <div class="information__details">
-          <div class="details__user">
-            <h2 class="user__heading">The octocat</h2>
-            <p class="user__text">@octocat</p>
-          </div>
-          <p class="details__created">Joined 25 Jan 2012</p>
-        </div>
-
-        <!-- Metrics -->
-        <div class="information__metrics">
-          <div class="metrics__card">
-            <p class="card__text">Repos</p>
-            <h3 class="card__heading">300</h3>
-          </div>
-          <div class="metrics__card">
-            <p class="card__text">Followers</p>
-            <h3>1000</h3>
-          </div>
-          <div class="metrics__card">
-            <p class="card__text">Following</p>
-            <h3 class="card__heading">200</h3>
-          </div>
-        </div>
-
-        <!-- Links -->
-        <div class="information__links">
-          <div class="links__card">
-            <img
-              class="card__img"
-              src="./assets/icon-location.svg"
-              alt="Location"
-            />
-            <a class="card__link" href="#">Vaslui</a>
-          </div>
-          <div class="links__card">
-            <img class="card__img" src="./assets/icon-twitter.svg" alt="X" />
-            <a class="card__link" href="#">@octocat</a>
-          </div>
-          <div class="links__card">
-            <img
-              class="card__img"
-              src="./assets/icon-website.svg"
-              alt="Location"
-            />
-            <a class="card__link" href="#">https://github.blog</a>
-          </div>
-          <div class="links__card">
-            <img
-              class="card__img"
-              src="./assets/icon-company.svg"
-              alt="Location"
-            />
-            <a class="card__link" href="#">@github</a>
-          </div>
-        </div>
-      </div>
-    </section>
+    </div>
 
     <!-- Import App.js -->
     <script src="./src/app.js"></script>

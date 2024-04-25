@@ -93,6 +93,46 @@ class UI {
       this.following.innerText = amount;
     }
   }
+
+  /**
+   * @description Set the location text
+   * @param {string} name
+   */
+  setLocation(name) {
+    if (name && typeof name === "string") {
+      this.location.innerText = name;
+    }
+  }
+
+  /**
+   * @description Set the twitter text
+   * @param {string} name
+   */
+  setTwitter(name) {
+    if (name && typeof name === "string") {
+      this.twitter.innerText = name;
+    }
+  }
+
+  /**
+   * @description Set the website text
+   * @param {string} name
+   */
+  setWebsite(name) {
+    if (name && typeof name === "string") {
+      this.website.innerText = name;
+    }
+  }
+
+  /**
+   * @description Set the company text
+   * @param {string} name
+   */
+  setCompany(name) {
+    if (name && typeof name === "string") {
+      this.company.innerText = name;
+    }
+  }
 }
 
 export default UI;

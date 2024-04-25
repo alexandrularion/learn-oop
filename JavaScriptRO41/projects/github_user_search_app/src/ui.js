@@ -61,9 +61,12 @@ class UI {
    */
   setJoinedDate(date) {
     if (date && typeof date === "string") {
-      this.joined.innerText = new Date(date).toLocaleDateString("en", {
-        // TODO: Added configuration
+      const formatedDate = new Date(date).toLocaleDateString("ro", {
+        day: "2-digit",
+        month: "short",
+        year: "numeric",
       });
+      this.joined.innerText = `Joined ${formatedDate}`;
     }
   }
 
@@ -83,7 +86,7 @@ class UI {
    */
   setRepositories(amount) {
     if (typeof amount === "number" && amount >= 0) {
-      this.repositories.innerText = amount;
+      this.repositories.innerText = amount.toLocaleString("ro");
     }
   }
 
@@ -93,7 +96,7 @@ class UI {
    */
   setFollowers(amount) {
     if (typeof amount === "number" && amount >= 0) {
-      this.followers.innerText = amount;
+      this.followers.innerText = amount.toLocaleString("ro"); // 1.000
     }
   }
 
@@ -103,47 +106,55 @@ class UI {
    */
   setFollowing(amount) {
     if (typeof amount === "number" && amount >= 0) {
-      this.following.innerText = amount;
+      this.following.innerText = amount.toLocaleString("ro");
     }
   }
 
   /**
    * @description Set the location text
-   * @param {string} name
+   * @param {string} name i.e. "Romania, Craiova"
+   * @param {string} url  i.e. "https://goo.gl/maps..."
    */
-  setLocation(name) {
+  setLocation(name, url) {
     if (name && typeof name === "string") {
       this.location.innerText = name;
+      this.location.setAttribute("href", url);
     }
   }
 
   /**
    * @description Set the twitter text
-   * @param {string} name
+   * @param {string} name i.e. "The Octocat"
+   * @param {string} url  i.e. "https://x.com/theoctocat"
    */
-  setTwitter(name) {
-    if (name && typeof name === "string") {
+  setTwitter(name, url) {
+    if (name && typeof name === "string" && url && typeof url === "string") {
       this.twitter.innerText = name;
+      this.twitter.setAttribute("href", url);
     }
   }
 
   /**
    * @description Set the website text
-   * @param {string} name
+   * @param {string} name  i.e. "mywebsite"
+   * @param {string} url   i.e. "https://mywebsite.com"
    */
-  setWebsite(name) {
-    if (name && typeof name === "string") {
+  setWebsite(name, url) {
+    if (name && typeof name === "string" && url && typeof url === "string") {
       this.website.innerText = name;
+      this.website.setAttribute("href", url);
     }
   }
 
   /**
    * @description Set the company text
-   * @param {string} name
+   * @param {string} name i.e. "MyCompany"
+   * @param {string} url  i.e. "https://mycompany.com"
    */
-  setCompany(name) {
-    if (name && typeof name === "string") {
+  setCompany(name, url) {
+    if (name && typeof name === "string" && url && typeof url === "string") {
       this.company.innerText = name;
+      this.company.setAttribute("href", url);
     }
   }
 }

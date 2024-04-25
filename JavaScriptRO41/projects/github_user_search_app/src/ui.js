@@ -8,6 +8,7 @@ class UI {
     this.avatar = document.querySelector(".avatar__img");
     this.userName = document.querySelector(".user__heading");
     this.userId = document.querySelector(".user__text");
+    this.joined = document.querySelector(".details__created");
 
     // Description
     this.description = document.querySelector(".information__description");
@@ -51,6 +52,18 @@ class UI {
   setUserId(id) {
     if (id && typeof id === "string") {
       this.userId.innerText = `@${id}`;
+    }
+  }
+
+  /**
+   * @description Set and format the joined date text
+   * @param {string} date
+   */
+  setJoinedDate(date) {
+    if (date && typeof date === "string") {
+      this.joined.innerText = new Date(date).toLocaleDateString("en", {
+        // TODO: Added configuration
+      });
     }
   }
 

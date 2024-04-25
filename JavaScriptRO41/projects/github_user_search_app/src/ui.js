@@ -116,7 +116,7 @@ class UI {
    * @param {string} url  i.e. "https://goo.gl/maps..."
    */
   setLocation(name, url) {
-    if (name && typeof name === "string") {
+    if (name && typeof name === "string" && url && typeof url === "string") {
       this.location.innerText = name;
       this.location.setAttribute("href", url);
     }

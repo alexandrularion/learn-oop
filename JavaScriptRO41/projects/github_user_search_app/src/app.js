@@ -4,22 +4,29 @@ import API from "./api.js";
 const ui = new UI();
 const api = new API();
 
-ui.setAvatar(
-  "https://images.pexels.com/photos/20830592/pexels-photo-20830592/free-photo-of-a-man-in-a-suit-and-tie-is-walking.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-);
+ui.setupButtonEventListener(async (search) => {
+  await api.getUserInfo(search);
+  const user = api.getData();
+  const isFound = api.getIsFound();
 
-ui.setUserName("Mihaitza");
-ui.setUserId("mihaitza_boss");
-ui.setJoinedDate("10/07/1991");
-ui.setDescription("Numarul 1 pa Romania");
+  if (isFound) {
+    // Enable the profile sections
+    ui.enableProfileSection();
 
-ui.setFollowers(1000000);
-ui.setFollowing(20);
-ui.setRepositories(9999999);
-
-ui.setLocation("Craiova, Ro", "https://google.com");
-ui.setTwitter("N-avem", "https://x.com");
-ui.setWebsite("mihaitza.boss", "https://mihaitza.ro");
-ui.setCompany("HaHaHa Production", "https://hahahaproduction.com/");
-
-api.getUserInfo("alexandrularion");
+    // Set all the data related to the user
+    ui.setAvatar(user.avatarUrl);
+    ui.setUserName(user.fullName);
+    ui.setUserId(user.id);
+    ui.setJoinedDate(user.createdAt);
+    ui.setDescription(user.biography);
+    ui.setFollowers(user.metrics.followers);
+    ui.setFollowing(user.metrics.following);
+    ui.setRepositories(user.metrics.repositories);
+    ui.setLocation(user.links.location, "https://google.com");
+    ui.setTwitter(user.links.twitter, "https://x.com");
+    ui.setWebsite(user.links.website, user.links.website);
+    ui.setCompany(user.links.company, "https://hahahaproduction.com/");
+  } else {
+    ui.enableEmptySection();
+  }
+});

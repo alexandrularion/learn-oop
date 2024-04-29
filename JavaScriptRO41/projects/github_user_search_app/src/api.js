@@ -1,14 +1,39 @@
 class API {
   constructor() {
     this.endpointURL = "https://api.github.com/users";
-    this.data = {};
     this.isFound = false;
+    this.data = {};
+  }
+
+  getIsFound() {
+    return this.isFound;
+  }
+
+  getData() {
+    return this.data;
   }
 
   async getUserInfo(username) {
     const response = await fetch(`${this.endpointURL}/${username}`);
     const body = await response.json();
-    this.data = body;
+    this.data = {
+      id: body.login,
+      avatarUrl: body.avatar_url,
+      fullName: body.name,
+      createdAt: body.created_at,
+      biography: body.bio,
+      metrics: {
+        followers: body.followers,
+        following: body.following,
+        repositories: body.public_repos,
+      },
+      links: {
+        location: body.location,
+        twitter: body.twitter_username,
+        website: body.blog,
+        company: body.company,
+      },
+    };
     /**
      {
         "login": "alexandrularion",
@@ -45,7 +70,7 @@ class API {
         "updated_at": "2024-04-03T11:55:15Z"
     }
      */
-    this.isFound = Object.values(body).length > 0; // true or false
+    this.isFound = Object.getOwnPropertyNames(body).includes("id");
   }
 }
 

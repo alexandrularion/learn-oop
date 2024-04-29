@@ -4,6 +4,11 @@ class UI {
     this.search = document.querySelector(".nav__input");
     this.button = document.querySelector(".nav__btn");
 
+    // Sections
+    this.emptySection = document.querySelector(".profile__empty");
+    this.avatarSection = document.querySelector(".profile__avatar");
+    this.informationSection = document.querySelector(".profile__information");
+
     // User Details
     this.avatar = document.querySelector(".avatar__img");
     this.userName = document.querySelector(".user__heading");
@@ -156,6 +161,41 @@ class UI {
       this.company.innerText = name;
       this.company.setAttribute("href", url);
     }
+  }
+
+  /**
+   * @description Add a click event on search button
+   * @param {Function} callback i.e. ()=> { doSomething() }
+   */
+  setupButtonEventListener(callback) {
+    this.button.addEventListener("click", () => {
+      if (this.search.value.length >= 3) {
+        callback(this.search.value);
+      }
+    });
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" && this.search.value.length >= 3) {
+        callback(this.search.value);
+      }
+    });
+  }
+
+  /**
+   * @description Set display flex to empty section and none to profile sections
+   */
+  enableEmptySection() {
+    this.emptySection.style.display = "flex";
+    this.avatarSection.style.display = "none";
+    this.informationSection.style.display = "none";
+  }
+
+  /**
+   * @description Set display flex profile sections and none to empty section
+   */
+  enableProfileSection() {
+    this.emptySection.style.display = "none";
+    this.avatarSection.style.display = "flex";
+    this.informationSection.style.display = "flex";
   }
 }
 

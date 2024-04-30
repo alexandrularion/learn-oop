@@ -4,6 +4,9 @@ class UI {
     this.search = document.querySelector(".nav__input");
     this.button = document.querySelector(".nav__btn");
 
+    // Error Labels
+    this.noResults = document.querySelector(".nav__results");
+
     // Sections
     this.emptySection = document.querySelector(".profile__empty");
     this.avatarSection = document.querySelector(".profile__avatar");
@@ -16,7 +19,7 @@ class UI {
     this.joined = document.querySelector(".details__created");
 
     // Description
-    this.description = document.querySelector(".information__description");
+    this.biography = document.querySelector(".information__description");
 
     // Metrics
     this.repositories = document.querySelectorAll(".card__heading")[0];
@@ -28,6 +31,19 @@ class UI {
     this.twitter = document.querySelectorAll(".card__link")[1];
     this.website = document.querySelectorAll(".card__link")[2];
     this.company = document.querySelectorAll(".card__link")[3];
+  }
+
+  /**
+   * @description Set the "Not Available" text when no data found
+   * @param {Element} element i.e. HTMLElement
+   */
+  setNotAvailable(element) {
+    element.innerText = "Not Avaiable";
+    element.style.opacity = 0.6;
+    element.style.cursor = "not-allowed";
+    if (element.localName === "a") {
+      element.setAttribute("href", "#");
+    }
   }
 
   /**
@@ -47,6 +63,8 @@ class UI {
   setUserName(name) {
     if (name && typeof name === "string") {
       this.userName.innerText = name;
+    } else {
+      this.setNotAvailable(this.userName);
     }
   }
 
@@ -77,11 +95,13 @@ class UI {
 
   /**
    * @description Set the biography text of the user
-   * @param {string} description  i.e. "Lorem ipsum..."
+   * @param {string} biography  i.e. "Lorem ipsum..."
    */
-  setDescription(description) {
-    if (description && typeof description === "string") {
-      this.description.innerText = description;
+  setBiography(biography) {
+    if (biography && typeof biography === "string") {
+      this.biography.innerText = biography;
+    } else {
+      this.setNotAvailable(this.biography);
     }
   }
 
@@ -124,6 +144,8 @@ class UI {
     if (name && typeof name === "string" && url && typeof url === "string") {
       this.location.innerText = name;
       this.location.setAttribute("href", url);
+    } else {
+      this.setNotAvailable(this.location);
     }
   }
 
@@ -136,6 +158,8 @@ class UI {
     if (name && typeof name === "string" && url && typeof url === "string") {
       this.twitter.innerText = name;
       this.twitter.setAttribute("href", url);
+    } else {
+      this.setNotAvailable(this.twitter);
     }
   }
 
@@ -148,6 +172,8 @@ class UI {
     if (name && typeof name === "string" && url && typeof url === "string") {
       this.website.innerText = name;
       this.website.setAttribute("href", url);
+    } else {
+      this.setNotAvailable(this.website);
     }
   }
 
@@ -160,6 +186,8 @@ class UI {
     if (name && typeof name === "string" && url && typeof url === "string") {
       this.company.innerText = name;
       this.company.setAttribute("href", url);
+    } else {
+      this.setNotAvailable(this.company);
     }
   }
 
@@ -181,21 +209,37 @@ class UI {
   }
 
   /**
-   * @description Set display flex to empty section and none to profile sections
-   */
-  enableEmptySection() {
-    this.emptySection.style.display = "flex";
-    this.avatarSection.style.display = "none";
-    this.informationSection.style.display = "none";
-  }
-
-  /**
    * @description Set display flex profile sections and none to empty section
    */
-  enableProfileSection() {
+  showProfileSection() {
     this.emptySection.style.display = "none";
     this.avatarSection.style.display = "flex";
     this.informationSection.style.display = "flex";
+  }
+
+  /**
+   * @description Set display flex to "No results" text in navigation
+   */
+  showErrorLabel() {
+    if (
+      this.noResults.style.display.length === 0 ||
+      this.noResults.style.display === "none"
+    ) {
+      this.noResults.style.display = "flex";
+      this.informationSection.style.opacity = 0.6;
+      this.avatarSection.style.opacity = 0.6;
+    }
+  }
+
+  /**
+   * @description Set display none to "No results" text in navigation
+   */
+  hideErrorLabel() {
+    if (this.noResults.style.display === "flex") {
+      this.noResults.style.display = "none";
+      this.informationSection.style.opacity = 1;
+      this.avatarSection.style.opacity = 1;
+    }
   }
 }
 

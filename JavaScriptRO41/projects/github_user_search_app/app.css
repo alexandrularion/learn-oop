@@ -134,6 +134,15 @@ body {
   font-weight: 700;
 }
 
+.nav__results {
+  display: none;
+  color: #f74646;
+  font-size: var(--text-size);
+  line-height: var(--text-line-height);
+  font-weight: 700;
+  text-wrap: nowrap;
+}
+
 .nav__input {
   height: 100%;
   width: 100%;

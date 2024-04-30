@@ -107,6 +107,7 @@ body {
   display: flex;
   align-items: center;
   gap: var(--space-2);
+  color: var(--text-color);
 }
 
 /* Navigation */
@@ -140,6 +141,7 @@ body {
   border: none;
   outline: none;
   appearance: none;
+  color: var(--text-color);
   font-size: var(--text-input-size);
   line-height: var(--text-input-line-height);
   caret-color: var(--app-color);
@@ -157,6 +159,19 @@ body {
   background-color: var(--background-color-2);
   border-radius: var(--radii-2);
   padding: 43px 48px;
+}
+
+.profile__empty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.empty__text {
+  font-size: var(--text-size);
+  line-height: var(--text-line-height);
+  color: var(--text-color);
+  font-weight: 400;
 }
 
 .profile__avatar {

@@ -4,6 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Clock App</title>
+    <!-- Import Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
     <!-- Import CSS -->
     <link rel="stylesheet" href="./src/styles/index.css" />
     <!-- Import JS -->
@@ -11,10 +18,10 @@
   </head>
   <body>
     <!-- Main Content -->
-    <section>
+    <section id="main__content">
       <!-- Main Content: Quote -->
-      <div>
-        <div>
+      <div class="quote-container">
+        <div class="quote-container__text-container">
           <p>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab dolorem
             consequuntur fugit voluptatem itaque impedit ipsa sit quo magni
@@ -27,13 +34,13 @@
       </div>
 
       <!-- Main Content: Time -->
-      <div>
-        <div>
-          <div>
+      <div class="time-container">
+        <div class="time-container__clock-container">
+          <div class="clock-container__greeting-container">
             <!-- TODO: Add icon -->
             <h4>GOOD MORNING, IT'S CURRENTLY</h4>
           </div>
-          <div>
+          <div class="clock-container__hour-container">
             <h1>11:37</h1>
             <h2>BST</h2>
           </div>
@@ -47,26 +54,26 @@
     </section>
 
     <!-- Expand Content -->
-    <section>
+    <section id="expand-content">
       <!-- Expand Content: Column 1 -->
-      <div>
-        <div>
+      <div class="expand-content__column-container">
+        <div class="column-container__card">
           <h6>CURRENT TIMEZONE</h6>
           <h2>Europe/London</h2>
         </div>
-        <div>
+        <div class="column-container__card">
           <h6>Day of the year</h6>
           <h2>295</h2>
         </div>
       </div>
 
       <!-- Expand Content: Column 2 -->
-      <div>
-        <div>
+      <div class="expand-content__column-container">
+        <div class="column-container__card">
           <h6>Day of the week</h6>
           <h2>5</h2>
         </div>
-        <div>
+        <div class="column-container__card">
           <h6>Week number</h6>
           <h2>30</h2>
         </div>

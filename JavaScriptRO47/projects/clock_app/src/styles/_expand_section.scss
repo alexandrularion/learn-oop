@@ -1,0 +1,31 @@
+#expand-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+  padding: 60px 0;
+
+  .layout {
+    height: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .column-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    .column-container__card {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+  }
+
+  hr {
+    height: 100%;
+    border-left: 1px solid var(--app-color-2);
+  }
+}

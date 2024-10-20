@@ -5,6 +5,10 @@
   font-family: "Inter", sans-serif;
 }
 
+body {
+  height: 100vh;
+}
+
 p {
   font-size: var(--text-font-size);
   line-height: var(--text-line-height);

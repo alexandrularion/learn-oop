@@ -40,6 +40,10 @@
   font-family: "Inter", sans-serif;
 }
 
+body {
+  height: 100vh;
+}
+
 p {
   font-size: var(--text-font-size);
   line-height: var(--text-line-height);
@@ -133,7 +137,7 @@ button:hover span {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   padding: 60px 0;
   background: linear-gradient(90deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/bkg_1.jpg);
@@ -179,4 +183,32 @@ button:hover span {
   display: flex;
   align-items: flex-end;
   gap: 11px;
+}
+
+#expand-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+  padding: 60px 0;
+}
+#expand-content .layout {
+  height: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+#expand-content .column-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+#expand-content .column-container .column-container__card {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+#expand-content hr {
+  height: 100%;
+  border-left: 1px solid var(--app-color-2);
 }/*# sourceMappingURL=index.css.map */

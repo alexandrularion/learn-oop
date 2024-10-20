@@ -4,7 +4,7 @@
   --app-color-3: #fff;
   --text-font-size: 18px;
   --text-line-height: 28px;
-  --text-font-weight: 400;
+  --text-font-weight: 300;
   --heading-font-size-1: 200px;
   --heading-line-height-1: 200px;
   --heading-font-weight-1: 700;
@@ -27,6 +27,9 @@
   --heading-line-height-6: 28px;
   --heading-font-weight-6: 400;
   --heading-spacing-6: 3px;
+  --button-font-size: 16px;
+  --button-font-weight: 700;
+  --button-text-color: #bfbfbf;
 }
 
 * {
@@ -93,4 +96,75 @@ h6 {
   display: flex;
   flex-direction: column;
   width: 1110px;
+}
+
+button {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: none;
+  border: none;
+  height: 56px;
+  padding: 0 10px;
+  border-radius: 28px;
+  background: var(--app-color-3);
+  font-size: var(--button-font-size);
+  font-weight: var(--button-font-weight);
+  color: var(--button-text-color);
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+button span {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: var(--app-color-2);
+}
+button:hover span {
+  background-color: #999999;
+}
+
+#main-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  padding: 60px 0;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/bkg_1.jpg);
+  background-size: cover;
+  background-position: center;
+}
+#main-content .quote-container {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+#main-content .quote-container .quote-container__text-container {
+  display: flex;
+  align-items: flex-start;
+  max-width: 573px;
+  gap: 16px;
+}
+#main-content .time-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 16px;
+}
+#main-content .time-container .time-container__clock-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+#main-content .time-container .time-container__clock-container .clock-container__greeting-container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+#main-content .time-container .time-container__clock-container .clock-container__hour-container {
+  display: flex;
+  align-items: flex-end;
+  gap: 11px;
 }/*# sourceMappingURL=index.css.map */

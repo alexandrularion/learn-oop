@@ -1,0 +1,27 @@
+button {
+  appearance: none;
+  outline: none;
+  border: none;
+  height: 56px;
+  padding: 0 10px;
+  border-radius: 28px;
+  background: var(--app-color-3);
+  font-size: var(--button-font-size);
+  font-weight: var(--button-font-weight);
+  color: var(--button-text-color);
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+
+  span {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: var(--app-color-2);
+  }
+
+  &:hover {
+    span {
+      background-color: #999999;
+    }
+  }
+}

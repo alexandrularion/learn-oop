@@ -18,45 +18,47 @@
   </head>
   <body>
     <!-- Main Content -->
-    <section id="main__content">
-      <!-- Main Content: Quote -->
-      <div class="quote-container">
-        <div class="quote-container__text-container">
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab dolorem
-            consequuntur fugit voluptatem itaque impedit ipsa sit quo magni
-            cumque sint nisi doloremque exercitationem aperiam aliquam minus,
-            veritatis ea odio?
-          </p>
-          <button>Refresh</button>
+    <section id="main-content">
+      <div class="layout">
+        <!-- Main Content: Quote -->
+        <div class="quote-container">
+          <div class="quote-container__text-container">
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab
+              dolorem consequuntur fugit voluptatem itaque impedit ipsa sit quo
+              magni cumque sint nisi doloremque exercitationem aperiam aliquam
+              minus, veritatis ea odio?
+            </p>
+            <button>Refresh</button>
+          </div>
+          <h5>Ada Lovelace</h5>
         </div>
-        <h5>Ada Lovelace</h5>
-      </div>
 
-      <!-- Main Content: Time -->
-      <div class="time-container">
-        <div class="time-container__clock-container">
-          <div class="clock-container__greeting-container">
+        <!-- Main Content: Time -->
+        <div class="time-container">
+          <div class="time-container__clock-container">
+            <div class="clock-container__greeting-container">
+              <!-- TODO: Add icon -->
+              <h4>GOOD MORNING, IT'S CURRENTLY</h4>
+            </div>
+            <div class="clock-container__hour-container">
+              <h1>11:37</h1>
+              <h2>BST</h2>
+            </div>
+            <h3>IN LONDON, UK</h3>
+          </div>
+          <button>
+            MORE
             <!-- TODO: Add icon -->
-            <h4>GOOD MORNING, IT'S CURRENTLY</h4>
-          </div>
-          <div class="clock-container__hour-container">
-            <h1>11:37</h1>
-            <h2>BST</h2>
-          </div>
-          <h3>IN LONDON, UK</h3>
+          </button>
         </div>
-        <button>
-          MORE
-          <!-- TODO: Add icon -->
-        </button>
       </div>
     </section>
 
     <!-- Expand Content -->
     <section id="expand-content">
       <!-- Expand Content: Column 1 -->
-      <div class="expand-content__column-container">
+      <div class="column-container">
         <div class="column-container__card">
           <h6>CURRENT TIMEZONE</h6>
           <h2>Europe/London</h2>
@@ -68,7 +70,7 @@
       </div>
 
       <!-- Expand Content: Column 2 -->
-      <div class="expand-content__column-container">
+      <div class="column-container">
         <div class="column-container__card">
           <h6>Day of the week</h6>
           <h2>5</h2>

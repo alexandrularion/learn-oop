@@ -1,0 +1,51 @@
+#main-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  padding: 60px 0;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../assets/bkg_1.jpg);
+  background-size: cover;
+  background-position: center;
+
+  .quote-container {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+
+    .quote-container__text-container {
+      display: flex;
+      align-items: flex-start;
+      max-width: 573px;
+      gap: 16px;
+    }
+  }
+
+  .time-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 16px;
+
+    .time-container__clock-container {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      .clock-container__greeting-container {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+
+      .clock-container__hour-container {
+        display: flex;
+        align-items: flex-end;
+        gap: 11px;
+      }
+    }
+  }
+}

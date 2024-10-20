@@ -10,6 +10,11 @@
   background-size: cover;
   background-position: center;
 
+  .layout {
+    justify-content: space-between;
+    height: 100%;
+  }
+
   .quote-container {
     display: flex;
     flex-direction: column;
@@ -20,6 +25,10 @@
       align-items: flex-start;
       max-width: 573px;
       gap: 16px;
+
+      button {
+        padding: 0 10px;
+      }
     }
   }
 

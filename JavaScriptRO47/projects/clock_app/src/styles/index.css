@@ -15,7 +15,7 @@
   --heading-font-size-3: 24px;
   --heading-line-height-3: 28px;
   --heading-font-weight-3: 700;
-  --heading-spacing-3: -4.8px;
+  --heading-spacing-3: 4.8px;
   --heading-font-size-4: 20px;
   --heading-line-height-4: 28px;
   --heading-font-weight-4: 400;
@@ -30,6 +30,7 @@
   --button-font-size: 16px;
   --button-font-weight: 700;
   --button-text-color: #bfbfbf;
+  --button-spacing: 5px;
 }
 
 * {
@@ -99,13 +100,17 @@ h6 {
 }
 
 button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  letter-spacing: var(--button-spacing);
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
   outline: none;
   border: none;
   height: 56px;
-  padding: 0 10px;
+  padding: 0 10px 0 15px;
   border-radius: 28px;
   background: var(--app-color-3);
   font-size: var(--button-font-size);
@@ -135,6 +140,10 @@ button:hover span {
   background-size: cover;
   background-position: center;
 }
+#main-content .layout {
+  justify-content: space-between;
+  height: 100%;
+}
 #main-content .quote-container {
   display: flex;
   flex-direction: column;
@@ -145,6 +154,9 @@ button:hover span {
   align-items: flex-start;
   max-width: 573px;
   gap: 16px;
+}
+#main-content .quote-container .quote-container__text-container button {
+  padding: 0 10px;
 }
 #main-content .time-container {
   display: flex;

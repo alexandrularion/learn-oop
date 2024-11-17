@@ -137,9 +137,11 @@ button:hover span {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  gap: 60px;
   height: 100%;
   width: 100%;
-  padding: 60px 0;
+  padding-top: 60px;
   background: linear-gradient(90deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/bkg_1.jpg);
   background-size: cover;
   background-position: center;
@@ -189,8 +191,15 @@ button:hover span {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 50vh;
+  height: 0;
   padding: 60px 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.7);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s all ease-in-out;
 }
 #expand-content .layout {
   height: 100%;
